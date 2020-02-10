@@ -12,6 +12,7 @@
 		5C0360741FB90013007BC593 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C0360721FB90013007BC593 /* Main.storyboard */; };
 		5C0360761FB90013007BC593 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5C0360751FB90013007BC593 /* Assets.xcassets */; };
 		5C0360791FB90013007BC593 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C0360771FB90013007BC593 /* LaunchScreen.storyboard */; };
+		A96A25EF23F1D01900CCB268 /* GraphViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A96A25EE23F1D01900CCB268 /* GraphViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		5C0360751FB90013007BC593 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5C0360781FB90013007BC593 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5C03607A1FB90013007BC593 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A96A25EE23F1D01900CCB268 /* GraphViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +59,7 @@
 			isa = PBXGroup;
 			children = (
 				5C03606E1FB90013007BC593 /* AppDelegate.swift */,
+				A96A25EE23F1D01900CCB268 /* GraphViewController.swift */,
 				5C0360701FB90013007BC593 /* HRMViewController.swift */,
 				5C0360721FB90013007BC593 /* Main.storyboard */,
 				5C0360751FB90013007BC593 /* Assets.xcassets */,
@@ -138,6 +141,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A96A25EF23F1D01900CCB268 /* GraphViewController.swift in Sources */,
 				5C0360711FB90013007BC593 /* HRMViewController.swift in Sources */,
 				5C03606F1FB90013007BC593 /* AppDelegate.swift in Sources */,
 			);
