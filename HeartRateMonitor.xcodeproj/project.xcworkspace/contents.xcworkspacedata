@@ -2,10 +2,10 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:../HeartRateMonitor/Assets.xcassets/rw-logo.imageset/Longhorn">
+      location = "group:../HeartRateMonitor/ViewControllers/GraphViewController.swift">
    </FileRef>
    <FileRef
-      location = "group:../HeartRateMonitor/Longhorn">
+      location = "group:../HeartRateMonitor/ViewControllers/HRMViewController.swift">
    </FileRef>
    <FileRef
       location = "self:">
