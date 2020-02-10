@@ -286,10 +286,10 @@ calendar view controller</string>
             </objects>
             <point key="canvasLocation" x="704.79999999999995" y="141.67916041979012"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Tab View Controller-->
         <scene sceneID="nTK-5Y-V4y">
             <objects>
-                <tabBarController id="vyl-Va-yFp" sceneMemberID="viewController">
+                <tabBarController id="vyl-Va-yFp" customClass="TabViewController" customModule="PP" customModuleProvider="target" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="O1T-7o-UoP">
                         <nil key="title"/>
                     </navigationItem>

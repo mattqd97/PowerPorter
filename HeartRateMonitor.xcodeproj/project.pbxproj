@@ -13,6 +13,7 @@
 		5C0360791FB90013007BC593 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C0360771FB90013007BC593 /* LaunchScreen.storyboard */; };
 		A93C3F0123F1EBC600FBAB15 /* GraphViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A93C3F0023F1EBC600FBAB15 /* GraphViewController.swift */; };
 		A93C3F0323F1EBD800FBAB15 /* HRMViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A93C3F0223F1EBD800FBAB15 /* HRMViewController.swift */; };
+		A93C3F0523F1F58E00FBAB15 /* TabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A93C3F0423F1F58E00FBAB15 /* TabViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		5C03607A1FB90013007BC593 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A93C3F0023F1EBC600FBAB15 /* GraphViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GraphViewController.swift; sourceTree = "<group>"; };
 		A93C3F0223F1EBD800FBAB15 /* HRMViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HRMViewController.swift; sourceTree = "<group>"; };
+		A93C3F0423F1F58E00FBAB15 /* TabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +75,7 @@
 			children = (
 				A93C3F0223F1EBD800FBAB15 /* HRMViewController.swift */,
 				A93C3F0023F1EBC600FBAB15 /* GraphViewController.swift */,
+				A93C3F0423F1F58E00FBAB15 /* TabViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -149,6 +152,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A93C3F0523F1F58E00FBAB15 /* TabViewController.swift in Sources */,
 				A93C3F0323F1EBD800FBAB15 /* HRMViewController.swift in Sources */,
 				A93C3F0123F1EBC600FBAB15 /* GraphViewController.swift in Sources */,
 				5C03606F1FB90013007BC593 /* AppDelegate.swift in Sources */,
