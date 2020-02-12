@@ -3,7 +3,9 @@
 
 target 'HeartRateMonitor' do
   # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
   pod 'Charts' 
+  pod 'JTAppleCalendar'
 
   # Pods for HeartRateMonitor
 

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		135F42C60BBBECCEF86967DC /* Pods_HeartRateMonitor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 147C18AB3F0AE00E2382B705 /* Pods_HeartRateMonitor.framework */; };
 		5C03606F1FB90013007BC593 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C03606E1FB90013007BC593 /* AppDelegate.swift */; };
 		5C0360741FB90013007BC593 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C0360721FB90013007BC593 /* Main.storyboard */; };
 		5C0360761FB90013007BC593 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5C0360751FB90013007BC593 /* Assets.xcassets */; };
@@ -16,13 +17,14 @@
 		A93C3F0523F1F58E00FBAB15 /* TabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A93C3F0423F1F58E00FBAB15 /* TabViewController.swift */; };
 		A93C3F0723F1FA4A00FBAB15 /* BTSample.swift in Sources */ = {isa = PBXBuildFile; fileRef = A93C3F0623F1FA4A00FBAB15 /* BTSample.swift */; };
 		A9B86A2623F3A2A9006655A7 /* BluetoothController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9B86A2523F3A2A9006655A7 /* BluetoothController.swift */; };
-		FB2EA98D75B04B7DF6617C48 /* libPods-HeartRateMonitor.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5761BBCCA49A3B9B897E7B8F /* libPods-HeartRateMonitor.a */; };
+		A9B86A2823F3A9B2006655A7 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9B86A2723F3A9B2006655A7 /* CalendarViewController.swift */; };
+		A9B86A2A23F3AC19006655A7 /* DataCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9B86A2923F3AC19006655A7 /* DataCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		147C18AB3F0AE00E2382B705 /* Pods_HeartRateMonitor.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HeartRateMonitor.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C14A3487C881C3673EADACB /* Pods-HeartRateMonitor.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HeartRateMonitor.release.xcconfig"; path = "Target Support Files/Pods-HeartRateMonitor/Pods-HeartRateMonitor.release.xcconfig"; sourceTree = "<group>"; };
 		46C9D27EE0ED43EFE96E9AF8 /* Pods-HeartRateMonitor.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HeartRateMonitor.debug.xcconfig"; path = "Target Support Files/Pods-HeartRateMonitor/Pods-HeartRateMonitor.debug.xcconfig"; sourceTree = "<group>"; };
-		5761BBCCA49A3B9B897E7B8F /* libPods-HeartRateMonitor.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HeartRateMonitor.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C03606B1FB90013007BC593 /* PP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C03606E1FB90013007BC593 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5C0360731FB90013007BC593 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -34,6 +36,8 @@
 		A93C3F0423F1F58E00FBAB15 /* TabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabViewController.swift; sourceTree = "<group>"; };
 		A93C3F0623F1FA4A00FBAB15 /* BTSample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BTSample.swift; sourceTree = "<group>"; };
 		A9B86A2523F3A2A9006655A7 /* BluetoothController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BluetoothController.swift; sourceTree = "<group>"; };
+		A9B86A2723F3A9B2006655A7 /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
+		A9B86A2923F3AC19006655A7 /* DataCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,7 +45,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FB2EA98D75B04B7DF6617C48 /* libPods-HeartRateMonitor.a in Frameworks */,
+				135F42C60BBBECCEF86967DC /* Pods_HeartRateMonitor.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,6 +78,7 @@
 				5C03606E1FB90013007BC593 /* AppDelegate.swift */,
 				A93C3F0623F1FA4A00FBAB15 /* BTSample.swift */,
 				A9B86A2523F3A2A9006655A7 /* BluetoothController.swift */,
+				A9B86A2923F3AC19006655A7 /* DataCell.swift */,
 				A93C3EFC23F1E97A00FBAB15 /* Controllers */,
 				5C0360721FB90013007BC593 /* Main.storyboard */,
 				5C0360771FB90013007BC593 /* LaunchScreen.storyboard */,
@@ -95,7 +100,7 @@
 		886227CE1A8B80C0D053368B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				5761BBCCA49A3B9B897E7B8F /* libPods-HeartRateMonitor.a */,
+				147C18AB3F0AE00E2382B705 /* Pods_HeartRateMonitor.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -106,6 +111,7 @@
 				A93C3F0223F1EBD800FBAB15 /* HRMViewController.swift */,
 				A93C3F0023F1EBC600FBAB15 /* GraphViewController.swift */,
 				A93C3F0423F1F58E00FBAB15 /* TabViewController.swift */,
+				A9B86A2723F3A9B2006655A7 /* CalendarViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -121,6 +127,7 @@
 				5C0360671FB90013007BC593 /* Sources */,
 				5C0360681FB90013007BC593 /* Frameworks */,
 				5C0360691FB90013007BC593 /* Resources */,
+				6D100203B2A0A89198739AE8 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -180,6 +187,26 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		6D100203B2A0A89198739AE8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HeartRateMonitor/Pods-HeartRateMonitor-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Charts/Charts.framework",
+				"${BUILT_PRODUCTS_DIR}/JTAppleCalendar/JTAppleCalendar.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Charts.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JTAppleCalendar.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-HeartRateMonitor/Pods-HeartRateMonitor-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		8AAD8811C81E1DBED6B2E848 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -212,8 +239,10 @@
 				A93C3F0723F1FA4A00FBAB15 /* BTSample.swift in Sources */,
 				A93C3F0523F1F58E00FBAB15 /* TabViewController.swift in Sources */,
 				A93C3F0323F1EBD800FBAB15 /* HRMViewController.swift in Sources */,
+				A9B86A2A23F3AC19006655A7 /* DataCell.swift in Sources */,
 				A93C3F0123F1EBC600FBAB15 /* GraphViewController.swift in Sources */,
 				A9B86A2623F3A2A9006655A7 /* BluetoothController.swift in Sources */,
+				A9B86A2823F3A9B2006655A7 /* CalendarViewController.swift in Sources */,
 				5C03606F1FB90013007BC593 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
