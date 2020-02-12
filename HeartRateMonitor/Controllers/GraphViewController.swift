@@ -44,25 +44,14 @@ class GraphViewController: UIViewController {
   // This is where we are going to store all the numbers.
   // Great name too
   var numbers : [Double] = []
+  // samples from Stress Detector in BTSample.sample
   
   override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
   }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-  
-  
   @IBAction func indexChanged(_ sender: Any) {
     switch segment.selectedSegmentIndex
     {
@@ -85,12 +74,13 @@ class GraphViewController: UIViewController {
       else {
         print("Cound not unwrap \(String(describing: txtBox.text))")
         return
-    }
+      }
     
     numbers.append(input) //here we add the data to the array.
     updateGraph()
   }
   
+  // Function that updates graph
   func updateGraph(){
     //this is the Array that will eventually be displayed on the graph.
     var lineChartEntry  = [ChartDataEntry]()
@@ -98,10 +88,10 @@ class GraphViewController: UIViewController {
       
     //here is the for loop
     for i in 0..<numbers.count {
-
-    // here we set the X and Y status in a data chart entry
-    let value = ChartDataEntry(x: Double(i), y: numbers[i])
-        lineChartEntry.append(value) // here we add it to the data set
+      // here we set the X and Y status in a data chart entry
+//      let value = ChartDataEntry(x: Double(i), y: numbers[i])
+      let value = ChartDataEntry(x: Double(i), y: Double(BTSample.samples[i].heartrate))
+      lineChartEntry.append(value) // here we add it to the data set
     }
 
     //Here we convert lineChartEntry to a LineChartDataSet
@@ -115,6 +105,17 @@ class GraphViewController: UIViewController {
     chartView.data = data //finally - it adds the chart data to the chart and causes an update
     chartView.chartDescription?.text = "My awesome chart" // Here we set the description for the graph
   }
+  
+
+  /*
+  // MARK: - Navigation
+
+  // In a storyboard-based application, you will often want to do a little preparation before navigation
+  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+      // Get the new view controller using segue.destination.
+      // Pass the selected object to the new view controller.
+  }
+  */
   
 
 }

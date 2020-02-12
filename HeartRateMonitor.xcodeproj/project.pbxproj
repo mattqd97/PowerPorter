@@ -15,6 +15,7 @@
 		A93C3F0323F1EBD800FBAB15 /* HRMViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A93C3F0223F1EBD800FBAB15 /* HRMViewController.swift */; };
 		A93C3F0523F1F58E00FBAB15 /* TabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A93C3F0423F1F58E00FBAB15 /* TabViewController.swift */; };
 		A93C3F0723F1FA4A00FBAB15 /* BTSample.swift in Sources */ = {isa = PBXBuildFile; fileRef = A93C3F0623F1FA4A00FBAB15 /* BTSample.swift */; };
+		A9B86A2623F3A2A9006655A7 /* BluetoothController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9B86A2523F3A2A9006655A7 /* BluetoothController.swift */; };
 		FB2EA98D75B04B7DF6617C48 /* libPods-HeartRateMonitor.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5761BBCCA49A3B9B897E7B8F /* libPods-HeartRateMonitor.a */; };
 /* End PBXBuildFile section */
 
@@ -32,6 +33,7 @@
 		A93C3F0223F1EBD800FBAB15 /* HRMViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HRMViewController.swift; sourceTree = "<group>"; };
 		A93C3F0423F1F58E00FBAB15 /* TabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabViewController.swift; sourceTree = "<group>"; };
 		A93C3F0623F1FA4A00FBAB15 /* BTSample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BTSample.swift; sourceTree = "<group>"; };
+		A9B86A2523F3A2A9006655A7 /* BluetoothController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BluetoothController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,12 +72,13 @@
 			isa = PBXGroup;
 			children = (
 				5C03606E1FB90013007BC593 /* AppDelegate.swift */,
+				A93C3F0623F1FA4A00FBAB15 /* BTSample.swift */,
+				A9B86A2523F3A2A9006655A7 /* BluetoothController.swift */,
 				A93C3EFC23F1E97A00FBAB15 /* Controllers */,
 				5C0360721FB90013007BC593 /* Main.storyboard */,
-				5C0360751FB90013007BC593 /* Assets.xcassets */,
 				5C0360771FB90013007BC593 /* LaunchScreen.storyboard */,
+				5C0360751FB90013007BC593 /* Assets.xcassets */,
 				5C03607A1FB90013007BC593 /* Info.plist */,
-				A93C3F0623F1FA4A00FBAB15 /* BTSample.swift */,
 			);
 			path = HeartRateMonitor;
 			sourceTree = "<group>";
@@ -86,7 +89,6 @@
 				46C9D27EE0ED43EFE96E9AF8 /* Pods-HeartRateMonitor.debug.xcconfig */,
 				3C14A3487C881C3673EADACB /* Pods-HeartRateMonitor.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -136,11 +138,12 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0910;
-				LastUpgradeCheck = 0910;
+				LastUpgradeCheck = 1120;
 				ORGANIZATIONNAME = "Ray Wenderlich";
 				TargetAttributes = {
 					5C03606A1FB90013007BC593 = {
 						CreatedOnToolsVersion = 9.1;
+						LastSwiftMigration = 1120;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -210,6 +213,7 @@
 				A93C3F0523F1F58E00FBAB15 /* TabViewController.swift in Sources */,
 				A93C3F0323F1EBD800FBAB15 /* HRMViewController.swift in Sources */,
 				A93C3F0123F1EBC600FBAB15 /* GraphViewController.swift in Sources */,
+				A9B86A2623F3A2A9006655A7 /* BluetoothController.swift in Sources */,
 				5C03606F1FB90013007BC593 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -250,6 +254,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -257,6 +262,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -307,6 +313,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -314,6 +321,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -354,7 +362,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.powerPorter.HeartRateMonitor;
 				PRODUCT_NAME = PP;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -370,7 +378,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.powerPorter.HeartRateMonitor;
 				PRODUCT_NAME = PP;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
