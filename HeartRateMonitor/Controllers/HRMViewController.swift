@@ -4,19 +4,17 @@ import UIKit
 import CoreBluetooth
 
 
-
 class HRMViewController: UIViewController {
   //MARK: ViewController stuff
 
   @IBOutlet weak var heartRateLabel: UILabel!
+  var bluetooth : BluetoothController!
 
   override func viewDidLoad() {
     super.viewDidLoad()
       
     // set up bluetooth
-    let bluetooth = BluetoothController()
-    bluetooth.centralManager = CBCentralManager(delegate: bluetooth, queue: nil)
-    bluetooth.delegate = self;
+    bluetooth = BluetoothController(self)
 
     // Make the digits monospaces to avoid shifting when the numbers change
     heartRateLabel.font = UIFont.monospacedDigitSystemFont(ofSize: heartRateLabel.font!.pointSize, weight: .regular)
@@ -24,10 +22,13 @@ class HRMViewController: UIViewController {
 
 }
 
+// Gets infomraiton from bluetooth through delegate
 extension HRMViewController: ModelDelegate {
   func didReceiveData(_ data: String) {
     heartRateLabel.text = data
-    print("BPM: \(data)")
+    #if DEBUG
+      print("BPM = \(data)")
+    #endif
   }
 }
 

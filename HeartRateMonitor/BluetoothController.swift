@@ -28,10 +28,11 @@
 
 import CoreBluetooth
 
-//let heartRateServiceCBUUID = CBUUID(string: "0xFFF0")
 let heartRateServiceCBUUID = CBUUID(string: "0x00FF")
 let heartRateMeasurementCharacteristicCBUUID = CBUUID(string: "FFF1")
-let bodySensorLocationCharacteristicCBUUID = CBUUID(string: "2A38")
+let gsrMeasurementCharacteristicCBUUID = CBUUID(string: "FFF2")
+let rosMeasurementCharacteristicCBUUID = CBUUID(string: "FFF3")
+
 
 class BluetoothController: NSObject, CBCentralManagerDelegate, CBPeripheralDelegate {
   //MARK: Properties
@@ -39,6 +40,13 @@ class BluetoothController: NSObject, CBCentralManagerDelegate, CBPeripheralDeleg
   var heartRatePeripheral: CBPeripheral!
   
   weak var delegate: ModelDelegate?
+  
+  required init(_ delegate: ModelDelegate) {
+    super.init()
+    
+    centralManager = CBCentralManager(delegate: self, queue: nil)
+    self.delegate = delegate
+  }
   
   //MARK: CBCentralManager stuff
   func centralManagerDidUpdateState(_ central: CBCentralManager) {
@@ -114,12 +122,17 @@ class BluetoothController: NSObject, CBCentralManagerDelegate, CBPeripheralDeleg
 
   func peripheral(_ peripheral: CBPeripheral, didUpdateValueFor characteristic: CBCharacteristic, error: Error?) {
     switch characteristic.uuid {
-//    case bodySensorLocationCharacteristicCBUUID:
-//      let bodySensorLocation = bodyLocation(from: characteristic)
-//      bodySensorLocationLabel.text = bodySensorLocation
     case heartRateMeasurementCharacteristicCBUUID:
       let bpm = heartRate(from: characteristic)
       delegate?.didReceiveData(String(bpm))
+    case gsrMeasurementCharacteristicCBUUID:
+      #if DEBUG
+        print("GSR = \(bluetoothCharacteristicToData(from: characteristic))")
+      #endif
+    case rosMeasurementCharacteristicCBUUID:
+      #if DEBUG
+        print("ROS = \(bluetoothCharacteristicToData(from: characteristic))")
+      #endif
     default:
       print("Unhandled Characteristic UUID: \(characteristic.uuid)")
     }
@@ -129,17 +142,17 @@ class BluetoothController: NSObject, CBCentralManagerDelegate, CBPeripheralDeleg
     guard let characteristicData = characteristic.value else { return -1 }
     let byteArray = [UInt8](characteristicData)
 
-    // See: https://www.bluetooth.com/specifications/gatt/viewer?attributeXmlFile=org.bluetooth.characteristic.heart_rate_measurement.xml
-    // The heart rate mesurement is in the 2nd, or in the 2nd and 3rd bytes, i.e. one one or in two bytes
-    // The first byte of the first bit specifies the length of the heart rate data, 0 == 1 byte, 1 == 2 bytes
-//    let firstBitValue = byteArray[0] & 0x01
-//    if firstBitValue == 0 {
-//      // Heart Rate Value Format is in the 2nd byte
-      return Int(byteArray[0])
-//    } else {
-//      // Heart Rate Value Format is in the 2nd and 3rd bytes
-//      return (Int(byteArray[1]) << 8) + Int(byteArray[2])
-//    }
+    // Assume data is just first byte
+    return Int(byteArray[0])
+
+  }
+  
+  private func bluetoothCharacteristicToData(from characteristic: CBCharacteristic) -> Int {
+    guard let characteristicData = characteristic.value else { return -1 }
+    let byteArray = [UInt8](characteristicData)
+
+    // Assume data is just first byte
+    return Int(byteArray[0])
 
   }
 }
