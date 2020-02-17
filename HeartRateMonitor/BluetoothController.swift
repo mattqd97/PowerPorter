@@ -124,14 +124,14 @@ class BluetoothController: NSObject, CBCentralManagerDelegate, CBPeripheralDeleg
     switch characteristic.uuid {
     case heartRateMeasurementCharacteristicCBUUID:
       let bpm = heartRate(from: characteristic)
-      delegate?.didReceiveData(String(bpm))
+//      delegate?.didReceiveData(String(bpm))
     case gsrMeasurementCharacteristicCBUUID:
       #if DEBUG
         print("GSR = \(bluetoothCharacteristicToData(from: characteristic))")
       #endif
     case rosMeasurementCharacteristicCBUUID:
       #if DEBUG
-        print("ROS = \(bluetoothCharacteristicToData(from: characteristic))")
+//        print("ROS = \(bluetoothCharacteristicToData(from: characteristic))")
       #endif
     default:
       print("Unhandled Characteristic UUID: \(characteristic.uuid)")
@@ -150,6 +150,10 @@ class BluetoothController: NSObject, CBCentralManagerDelegate, CBPeripheralDeleg
   private func bluetoothCharacteristicToData(from characteristic: CBCharacteristic) -> Int {
     guard let characteristicData = characteristic.value else { return -1 }
     let byteArray = [UInt8](characteristicData)
+    print(byteArray[0])
+    print(byteArray[1])
+    print(byteArray[2])
+
 
     // Assume data is just first byte
     return Int(byteArray[0])

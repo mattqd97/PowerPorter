@@ -4,6 +4,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -17,19 +18,19 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="100" translatesAutoresizingMaskIntoConstraints="NO" id="jMv-Nk-fez">
-                                <rect key="frame" x="45.5" y="179" width="284.5" height="265.5"/>
+                                <rect key="frame" x="37" y="179" width="301" height="265.5"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="N9k-Lq-Uw6">
-                                        <rect key="frame" x="0.0" y="0.0" width="284.5" height="265.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="301" height="265.5"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="750" verticalHuggingPriority="750" text="Current Heart Rate" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gx5-Hh-nFZ">
-                                                <rect key="frame" x="0.0" y="0.0" width="284.5" height="46.5"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="750" verticalHuggingPriority="750" text="Current Stress Level" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gx5-Hh-nFZ">
+                                                <rect key="frame" x="0.0" y="0.0" width="301" height="46.5"/>
                                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="34"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="--" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vav-fa-HwA">
-                                                <rect key="frame" x="88.5" y="46.5" width="107" height="219"/>
+                                                <rect key="frame" x="97" y="46.5" width="107" height="219"/>
                                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="160"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -56,7 +57,7 @@
             </objects>
             <point key="canvasLocation" x="705" y="937"/>
         </scene>
-        <!--Stress Red.-->
+        <!--Activities-->
         <scene sceneID="NMu-1w-fVs">
             <objects>
                 <viewController id="vBk-PO-eyR" sceneMemberID="viewController">
@@ -84,7 +85,7 @@ in the works</string>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="nGp-CT-95l"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Stress Red." image="arrow.down.right" catalog="system" id="SLR-UZ-bRT"/>
+                    <tabBarItem key="tabBarItem" title="Activities" image="arrow.down.right" catalog="system" id="SLR-UZ-bRT"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XSC-Vj-9bO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -218,33 +219,6 @@ in the works</string>
             </objects>
             <point key="canvasLocation" x="704.79999999999995" y="1702.3988005997003"/>
         </scene>
-        <!--Calendar-->
-        <scene sceneID="8Ft-G4-AZn">
-            <objects>
-                <viewController id="vji-er-Eae" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Yfn-nP-hIy">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cyM-5j-aCN">
-                                <rect key="frame" x="70" y="237" width="234" height="72"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <string key="text">This is a placeholder for the
-calendar view controller</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="MO9-JE-wFh"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Calendar" image="calendar" catalog="system" id="A18-l7-a7z"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="zC9-3m-bzT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="705" y="-583"/>
-        </scene>
         <!--Graph-->
         <scene sceneID="V54-oK-Ppp">
             <objects>
@@ -323,7 +297,7 @@ calendar view controller</string>
                         </userDefinedRuntimeAttributes>
                     </tabBar>
                     <connections>
-                        <segue destination="vji-er-Eae" kind="relationship" relationship="viewControllers" id="ken-jr-CdQ"/>
+                        <segue destination="66n-Mh-EqO" kind="relationship" relationship="viewControllers" id="LX8-O7-mXL"/>
                         <segue destination="ZZC-M5-6zV" kind="relationship" relationship="viewControllers" id="Xa8-Nf-GA1"/>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="spd-xI-uwt"/>
                         <segue destination="vBk-PO-eyR" kind="relationship" relationship="viewControllers" id="nTU-gO-jME"/>
@@ -360,6 +334,140 @@ calendar view controller</string>
             </objects>
             <point key="canvasLocation" x="1708" y="1700.5997001499252"/>
         </scene>
+        <!--Ib Calendar Data Source-->
+        <scene sceneID="WKo-3a-7qp">
+            <objects>
+                <viewController id="66n-Mh-EqO" customClass="CalendarViewController" customModule="PP" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cZT-nn-n6T">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="G6c-hm-roL" customClass="JTACMonthView" customModule="JTAppleCalendar">
+                                <rect key="frame" x="40" y="54" width="297" height="233"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="233" id="Qny-uY-T5N"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="pBU-wg-CG3">
+                                    <size key="itemSize" width="85" height="84"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="dateCell" id="Fsn-UD-V3f" customClass="DateCell" customModule="PP" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="85" height="84"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="85" height="84"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="dateHere" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cwB-lQ-hlx">
+                                                    <rect key="frame" x="7" y="31.5" width="71" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstItem="cwB-lQ-hlx" firstAttribute="centerY" secondItem="Fsn-UD-V3f" secondAttribute="centerY" id="4iE-PI-0m9"/>
+                                            <constraint firstItem="cwB-lQ-hlx" firstAttribute="centerX" secondItem="Fsn-UD-V3f" secondAttribute="centerX" id="72H-f1-Z9k"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="dateLabel" destination="cwB-lQ-hlx" id="wQ5-Oc-aLX"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="ibCalendarDataSource" destination="66n-Mh-EqO" id="ebF-kb-YNE"/>
+                                    <outlet property="ibCalendarDelegate" destination="66n-Mh-EqO" id="aIv-sF-ESS"/>
+                                </connections>
+                            </collectionView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="December" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N63-Lj-qqd">
+                                <rect key="frame" x="147" y="20" width="80" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Medium" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Qe-xe-dMZ">
+                                <rect key="frame" x="107" y="466" width="62" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Low" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w7l-0B-kwj">
+                                <rect key="frame" x="127" y="428" width="31" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Very Low" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U6b-5P-qiJ">
+                                <rect key="frame" x="107" y="387" width="70" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="High" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mgz-OG-ttd">
+                                <rect key="frame" x="127" y="507" width="36" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="square" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="A2p-14-c60">
+                                <rect key="frame" x="236" y="428" width="20" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" name="LowStress"/>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="square" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="GPd-ef-M0T">
+                                <rect key="frame" x="236" y="467" width="20" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" name="MediumStress"/>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="square" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="wjF-Se-Kag">
+                                <rect key="frame" x="236" y="508" width="20" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" name="HighStress"/>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="square" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="lXN-rK-yfk">
+                                <rect key="frame" x="235" y="389" width="20" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" name="NoStress"/>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Stress Levels" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m4u-1g-LmT">
+                                <rect key="frame" x="137" y="336" width="101" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="G6c-hm-roL" firstAttribute="top" secondItem="J8Y-Yb-7Dj" secondAttribute="top" constant="54" id="O1s-TI-UvT"/>
+                            <constraint firstItem="G6c-hm-roL" firstAttribute="leading" secondItem="J8Y-Yb-7Dj" secondAttribute="leading" constant="40" id="Yla-iH-qE0"/>
+                            <constraint firstItem="J8Y-Yb-7Dj" firstAttribute="trailing" secondItem="G6c-hm-roL" secondAttribute="trailing" constant="38" id="d1x-at-6mg"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="J8Y-Yb-7Dj"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Calendar" image="calendar" catalog="system" id="WiO-cx-5Zw" userLabel="Calendar"/>
+                    <connections>
+                        <outlet property="monthLabel" destination="N63-Lj-qqd" id="xHc-m8-Szg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iPw-WK-k9Y" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="704.79999999999995" y="-598.65067466266873"/>
+        </scene>
     </scenes>
     <resources>
         <image name=" " width="16" height="16"/>
@@ -368,6 +476,19 @@ calendar view controller</string>
         <image name="chart.bar" catalog="system" width="64" height="44"/>
         <image name="gear" catalog="system" width="64" height="58"/>
         <image name="house" catalog="system" width="64" height="54"/>
+        <image name="square" catalog="system" width="64" height="56"/>
+        <namedColor name="HighStress">
+            <color red="0.73900002241134644" green="0.19599999487400055" blue="0.43500000238418579" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="LowStress">
+            <color red="0.28299999237060547" green="0.60900002717971802" blue="0.66299998760223389" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="MediumStress">
+            <color red="0.37999999523162842" green="0.30399999022483826" blue="0.62000000476837158" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="NoStress">
+            <color red="0.28299999237060547" green="0.7720000147819519" blue="0.65200001001358032" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
     </resources>
     <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
 </document>
