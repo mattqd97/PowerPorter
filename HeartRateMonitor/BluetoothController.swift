@@ -29,9 +29,12 @@
 import CoreBluetooth
 
 let heartRateServiceCBUUID = CBUUID(string: "0x00FF")
-let heartRateMeasurementCharacteristicCBUUID = CBUUID(string: "FFF1")
-let gsrMeasurementCharacteristicCBUUID = CBUUID(string: "FFF2")
-let rosMeasurementCharacteristicCBUUID = CBUUID(string: "FFF3")
+let heartRateMeasurementCharacteristicCBUUID = CBUUID(string: "FFE8")
+let spo2MeasurementCharacteristicCBUUID = CBUUID(string: "FFEC")
+let accMeasurementCharacteristicCBUUID = CBUUID(string: "FFF8")
+//let accYMeasurementCharacteristicCBUUID = CBUUID(string: "FFF4")
+//let accZMeasurementCharacteristicCBUUID = CBUUID(string: "FFF8")
+let gsrMeasurementCharacteristicCBUUID = CBUUID(string: "FFFC")
 
 
 class BluetoothController: NSObject, CBCentralManagerDelegate, CBPeripheralDelegate {
@@ -123,22 +126,34 @@ class BluetoothController: NSObject, CBCentralManagerDelegate, CBPeripheralDeleg
   func peripheral(_ peripheral: CBPeripheral, didUpdateValueFor characteristic: CBCharacteristic, error: Error?) {
     switch characteristic.uuid {
     case heartRateMeasurementCharacteristicCBUUID:
-      let bpm = heartRate(from: characteristic)
-//      delegate?.didReceiveData(String(bpm))
+      let bpm = oneByteCharacteristicToData(from: characteristic)
+      delegate?.didReceiveData(String(bpm))
     case gsrMeasurementCharacteristicCBUUID:
       #if DEBUG
-        print("GSR = \(bluetoothCharacteristicToData(from: characteristic))")
+        print("GSR = \(twoByteCharacteristicToData(from: characteristic))")
       #endif
-    case rosMeasurementCharacteristicCBUUID:
+    case spo2MeasurementCharacteristicCBUUID:
       #if DEBUG
-//        print("ROS = \(bluetoothCharacteristicToData(from: characteristic))")
+        print("ROS = \(oneByteCharacteristicToData(from: characteristic))")
       #endif
+    case accMeasurementCharacteristicCBUUID:
+      #if DEBUG
+        print("Acc = \(accCharacteristicToData(from: characteristic))")
+      #endif
+//    case accYMeasurementCharacteristicCBUUID:
+//      #if DEBUG
+//        print("Acc Y = \(twoByteCharacteristicToData(from: characteristic))")
+//      #endif
+//    case accZMeasurementCharacteristicCBUUID:
+//      #if DEBUG
+//        print("Acc Z = \(twoByteCharacteristicToData(from: characteristic))")
+//      #endif
     default:
       print("Unhandled Characteristic UUID: \(characteristic.uuid)")
     }
   }
 
-  private func heartRate(from characteristic: CBCharacteristic) -> Int {
+  private func oneByteCharacteristicToData(from characteristic: CBCharacteristic) -> Int {
     guard let characteristicData = characteristic.value else { return -1 }
     let byteArray = [UInt8](characteristicData)
 
@@ -147,13 +162,33 @@ class BluetoothController: NSObject, CBCentralManagerDelegate, CBPeripheralDeleg
 
   }
   
+  private func twoByteCharacteristicToData(from characteristic: CBCharacteristic) -> Int {
+    guard let characteristicData = characteristic.value else { return -1 }
+    let byteArray = [UInt8](characteristicData)
+
+    // Assume data is just first byte
+    return Int(byteArray[1]) + (Int(byteArray[0])<<8)
+
+  }
+  
+  private func accCharacteristicToData(from characteristic: CBCharacteristic) -> [Int] {
+    guard let characteristicData = characteristic.value else { return [Int]() }
+    let byteArray = [UInt8](characteristicData)
+    var retArray = [Int]()
+    retArray.append((Int(byteArray[1]) + (Int(byteArray[0])<<8)))
+    retArray.append((Int(byteArray[3]) + (Int(byteArray[2])<<8)))    //retArray[2] = Int(byteArray[5]) + (Int(byteArray[4])<<8)
+
+    // Assume data is just first byte
+    return retArray
+
+  }
+  
   private func bluetoothCharacteristicToData(from characteristic: CBCharacteristic) -> Int {
     guard let characteristicData = characteristic.value else { return -1 }
     let byteArray = [UInt8](characteristicData)
     print(byteArray[0])
     print(byteArray[1])
-    print(byteArray[2])
-
+//    print(byteArray[2])
 
     // Assume data is just first byte
     return Int(byteArray[0])

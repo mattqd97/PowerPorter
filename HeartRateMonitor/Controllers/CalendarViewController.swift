@@ -8,7 +8,7 @@ class CalendarViewController: UIViewController {
     @IBOutlet weak var monthLabel: UILabel!
     override func viewDidLoad() {
         moods()
-        monthLabel.text = "February"
+        monthLabel.text = Date().month
         super.viewDidLoad()
     }
     
@@ -70,6 +70,12 @@ extension Date {
 
     func endOfMonth() -> Date {
         return Calendar.current.date(byAdding: DateComponents(month: 1, day: -1), to: self.startOfMonth())!
+    }
+  
+    var month: String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "MMMM"
+        return dateFormatter.string(from: self)
     }
 }
 

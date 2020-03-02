@@ -16,9 +16,13 @@
 		A93C3F0323F1EBD800FBAB15 /* HRMViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A93C3F0223F1EBD800FBAB15 /* HRMViewController.swift */; };
 		A93C3F0523F1F58E00FBAB15 /* TabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A93C3F0423F1F58E00FBAB15 /* TabViewController.swift */; };
 		A93C3F0723F1FA4A00FBAB15 /* BTSample.swift in Sources */ = {isa = PBXBuildFile; fileRef = A93C3F0623F1FA4A00FBAB15 /* BTSample.swift */; };
+		A96C8EAB2407237D0075A2E7 /* ActivitiesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A96C8EAA2407237D0075A2E7 /* ActivitiesViewController.swift */; };
 		A9B86A2623F3A2A9006655A7 /* BluetoothController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9B86A2523F3A2A9006655A7 /* BluetoothController.swift */; };
 		A9B86A2823F3A9B2006655A7 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9B86A2723F3A9B2006655A7 /* CalendarViewController.swift */; };
 		A9B86A2A23F3AC19006655A7 /* DataCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9B86A2923F3AC19006655A7 /* DataCell.swift */; };
+		A9CAA5EC240D56BD004D925B /* BreatheViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9CAA5EB240D56BD004D925B /* BreatheViewController.swift */; };
+		A9CAA5EF240D56FE004D925B /* BreatheView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9CAA5EE240D56FE004D925B /* BreatheView.swift */; };
+		A9CAA5F1240D5736004D925B /* CABasicAnimation+Custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9CAA5F0240D5736004D925B /* CABasicAnimation+Custom.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,9 +39,13 @@
 		A93C3F0223F1EBD800FBAB15 /* HRMViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HRMViewController.swift; sourceTree = "<group>"; };
 		A93C3F0423F1F58E00FBAB15 /* TabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabViewController.swift; sourceTree = "<group>"; };
 		A93C3F0623F1FA4A00FBAB15 /* BTSample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BTSample.swift; sourceTree = "<group>"; };
+		A96C8EAA2407237D0075A2E7 /* ActivitiesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivitiesViewController.swift; sourceTree = "<group>"; };
 		A9B86A2523F3A2A9006655A7 /* BluetoothController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BluetoothController.swift; sourceTree = "<group>"; };
 		A9B86A2723F3A9B2006655A7 /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
 		A9B86A2923F3AC19006655A7 /* DataCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataCell.swift; sourceTree = "<group>"; };
+		A9CAA5EB240D56BD004D925B /* BreatheViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreatheViewController.swift; sourceTree = "<group>"; };
+		A9CAA5EE240D56FE004D925B /* BreatheView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreatheView.swift; sourceTree = "<group>"; };
+		A9CAA5F0240D5736004D925B /* CABasicAnimation+Custom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CABasicAnimation+Custom.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +83,7 @@
 		5C03606D1FB90013007BC593 /* HeartRateMonitor */ = {
 			isa = PBXGroup;
 			children = (
+				A9CAA5ED240D56DA004D925B /* Breathe */,
 				5C03606E1FB90013007BC593 /* AppDelegate.swift */,
 				A93C3F0623F1FA4A00FBAB15 /* BTSample.swift */,
 				A9B86A2523F3A2A9006655A7 /* BluetoothController.swift */,
@@ -112,8 +121,19 @@
 				A93C3F0023F1EBC600FBAB15 /* GraphViewController.swift */,
 				A93C3F0423F1F58E00FBAB15 /* TabViewController.swift */,
 				A9B86A2723F3A9B2006655A7 /* CalendarViewController.swift */,
+				A96C8EAA2407237D0075A2E7 /* ActivitiesViewController.swift */,
+				A9CAA5EB240D56BD004D925B /* BreatheViewController.swift */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		A9CAA5ED240D56DA004D925B /* Breathe */ = {
+			isa = PBXGroup;
+			children = (
+				A9CAA5EE240D56FE004D925B /* BreatheView.swift */,
+				A9CAA5F0240D5736004D925B /* CABasicAnimation+Custom.swift */,
+			);
+			path = Breathe;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -236,13 +256,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A9CAA5EC240D56BD004D925B /* BreatheViewController.swift in Sources */,
 				A93C3F0723F1FA4A00FBAB15 /* BTSample.swift in Sources */,
 				A93C3F0523F1F58E00FBAB15 /* TabViewController.swift in Sources */,
 				A93C3F0323F1EBD800FBAB15 /* HRMViewController.swift in Sources */,
 				A9B86A2A23F3AC19006655A7 /* DataCell.swift in Sources */,
+				A96C8EAB2407237D0075A2E7 /* ActivitiesViewController.swift in Sources */,
 				A93C3F0123F1EBC600FBAB15 /* GraphViewController.swift in Sources */,
 				A9B86A2623F3A2A9006655A7 /* BluetoothController.swift in Sources */,
+				A9CAA5F1240D5736004D925B /* CABasicAnimation+Custom.swift in Sources */,
 				A9B86A2823F3A9B2006655A7 /* CalendarViewController.swift in Sources */,
+				A9CAA5EF240D56FE004D925B /* BreatheView.swift in Sources */,
 				5C03606F1FB90013007BC593 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
