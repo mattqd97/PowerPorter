@@ -20,7 +20,8 @@ Things that need to get done and have gotten done
 - [x] Tab View
 - [x] Bluetooth with 1 device
 - [x] 1 graph (ie gettings pods to work)
-- [ ] Calendar view merged
+- [x] Calendar view merged
 - [ ] Data structure random for debug
 - [ ] Testing???
 - [ ] Machine learning (Core ML)
+- [ ] Animation for breathing activity
