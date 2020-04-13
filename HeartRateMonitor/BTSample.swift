@@ -2,6 +2,7 @@
 
 import Foundation
 import os.log
+import CSV
 
 class BTSample: NSObject, NSCoding {
   // NSObject and NSCoding for persistance
@@ -9,9 +10,12 @@ class BTSample: NSObject, NSCoding {
   
   //MARK: Properties
   
-  var gsr:        Int32?  // sample from gsr sensor
-  var spO2:       Int32?  //
-  var heartrate:  Int32   // heart rate from sensor
+  var gsr:        Double?  // sample from gsr sensor
+  var spO2:       Double?
+  var heartrate:  Double   // heart rate from sensor
+  var ECG:        Double?
+  var EMG:        Double?
+  var stressed:   Double?  // For training
   var time:       Date    // time that sample is taken
   
   //MARK: Global Array
@@ -37,9 +41,9 @@ class BTSample: NSObject, NSCoding {
   
   //MARK: Initialization
   
-  init?(gsr: Int32?, spO2: Int32?, heartrate: Int32, time: Date) {
+  init?(gsr: Double?, spO2: Double?, heartrate: Double, time: Date) {
     // Initialize stored properties
-    if spO2 == 0 || heartrate == 0 {
+    if heartrate == 0 {
       return nil
     }
     self.gsr = gsr
@@ -48,6 +52,19 @@ class BTSample: NSObject, NSCoding {
     self.time = time
     
     // Check for init fail??
+  }
+  
+  init?(ecg: Double?, heartrate: Double, gsr: Double?, emg: Double?, stress: Double?) {
+    // Initialize stored properties
+    if heartrate == 0 {
+      return nil
+    }
+    
+    self.ECG = ecg
+    self.heartrate = heartrate
+    self.gsr = gsr
+    self.EMG = emg
+    self.time = Date() // current date
   }
   
   
@@ -62,15 +79,15 @@ class BTSample: NSObject, NSCoding {
   
   required convenience init?(coder aDecoder: NSCoder) {
     // heartrate is required
-    guard let heartrate = aDecoder.decodeObject(forKey: PropertyKey.heartrate) as? Int32
+    guard let heartrate = aDecoder.decodeObject(forKey: PropertyKey.heartrate) as? Double
     else {
       os_log("Unable to decode heartrate for a BTSample.", log: OSLog.default, type: .debug)
       return nil
     }
     
     // decode rest as optional
-    let gsr = aDecoder.decodeObject(forKey: PropertyKey.gsr) as? Int32
-    let spO2 = aDecoder.decodeObject(forKey: PropertyKey.spO2) as? Int32
+    let gsr = aDecoder.decodeObject(forKey: PropertyKey.gsr) as? Double
+    let spO2 = aDecoder.decodeObject(forKey: PropertyKey.spO2) as? Double
     guard let time = aDecoder.decodeObject(forKey: PropertyKey.time) as? Date
     else {
       os_log("Unable to decode time for a BTSample.", log: OSLog.default, type: .debug)
@@ -79,4 +96,45 @@ class BTSample: NSObject, NSCoding {
     
     self.init(gsr: gsr, spO2: spO2, heartrate: heartrate, time: time)
   }
+  
+  static func readCSV() {
+    // Get current path
+    let packageRoot = #file.replacingOccurrences(of: "HeartRateMonitor/BTSample.swift", with: "")
+    print("Directory = \(packageRoot)")
+    
+    
+    let stream = InputStream(fileAtPath: String(packageRoot) + "/AppData.csv")!
+    let csv = try! CSVReader(stream: stream)
+    
+    parseTrainingCSV(input: csv)
+    
+  }
+  
+  static func parseTrainingCSV(input csv: CSVReader) {
+    // Get first row
+    let _ = csv.next()
+    
+    // Parse rest
+    while let row = csv.next() {
+      
+      // Convert data to double
+      let rowAsDouble = row.compactMap(Double.init)
+      if rowAsDouble.count != 5 {
+        continue
+      }
+      
+      // Here is how the CSV columns are
+      // ECG | HR | handGSR | EMG | stress
+      guard let sample = BTSample(ecg: rowAsDouble[0], heartrate: rowAsDouble[1],
+                            gsr: rowAsDouble[2], emg: rowAsDouble[3], stress: rowAsDouble[4])
+        else {
+          print("Error parsing CSV")
+          return
+      }
+      samples.append(sample)
+      
+    }
+    
+  }
+  
 }

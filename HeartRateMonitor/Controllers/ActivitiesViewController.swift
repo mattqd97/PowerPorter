@@ -31,18 +31,35 @@ import UIKit
 class ActivitiesViewController: UIViewController {
 
   @IBOutlet weak var BreatheButton: UIButton!
+  @IBOutlet weak var BreatheButton2: UIButton!
+  @IBOutlet weak var BreatheButton3: UIButton!
+  @IBOutlet weak var BreatheButton4: UIButton!
   @IBOutlet weak var BreatheWatchButton: UIButton!
   
-  @IBAction func BreathingExercise(_ sender: Any) {
-    print("Pressed!")
+  @IBAction func BreathingExercise(_ sender: UIButton) {
     UIApplication.shared.open(NSURL(string:"https://www.verywellmind.com/how-to-reduce-stress-with-breathing-exercises-3144508")! as URL)
   }
   
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        BreatheButton.layer.cornerRadius = 6
-        BreatheWatchButton.layer.cornerRadius = 6
-        // Do any additional setup after loading the view.
+  @IBAction func StressRed(_ sender: UIButton) {
+    UIApplication.shared.open(NSURL(string:"https://www.youtube.com/watch?v=SEfs5TJZ6Nk")! as URL)
+  }
+  
+  @IBAction func Yoga(_ sender: UIButton) {
+    UIApplication.shared.open(NSURL(string:"https://www.yogajournal.com/practice/yoga-for-inner-peace-stress-relief-daily-practice-challenge")! as URL)
+  }
+  
+  @IBAction func Music(_ sender: UIButton) {
+    UIApplication.shared.open(NSURL(string:"https://www.youtube.com/watch?v=lFcSrYw-ARY")! as URL)
+  }
+  
+  override func viewDidLoad() {
+    super.viewDidLoad()
+    BreatheButton.layer.cornerRadius = 6
+    BreatheButton2.layer.cornerRadius = 6
+    BreatheButton3.layer.cornerRadius = 6
+    BreatheButton4.layer.cornerRadius = 6
+    BreatheWatchButton.layer.cornerRadius = 6
+    // Do any additional setup after loading the view.
     }
     
 

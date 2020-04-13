@@ -12,12 +12,15 @@ class HRMViewController: UIViewController {
 
   override func viewDidLoad() {
     super.viewDidLoad()
+    
+    // Debug
+    BTSample.readCSV()
       
-    // set up bluetooth
-    bluetooth = BluetoothController(self)
-
-    // Make the digits monospaces to avoid shifting when the numbers change
-    heartRateLabel.font = UIFont.monospacedDigitSystemFont(ofSize: heartRateLabel.font!.pointSize, weight: .regular)
+//    // set up bluetooth
+//    bluetooth = BluetoothController(self)
+//
+//    // Make the digits monospaces to avoid shifting when the numbers change
+//    heartRateLabel.font = UIFont.monospacedDigitSystemFont(ofSize: heartRateLabel.font!.pointSize, weight: .regular)
   }
 
 }

@@ -29,7 +29,7 @@
 		147C18AB3F0AE00E2382B705 /* Pods_HeartRateMonitor.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HeartRateMonitor.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C14A3487C881C3673EADACB /* Pods-HeartRateMonitor.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HeartRateMonitor.release.xcconfig"; path = "Target Support Files/Pods-HeartRateMonitor/Pods-HeartRateMonitor.release.xcconfig"; sourceTree = "<group>"; };
 		46C9D27EE0ED43EFE96E9AF8 /* Pods-HeartRateMonitor.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HeartRateMonitor.debug.xcconfig"; path = "Target Support Files/Pods-HeartRateMonitor/Pods-HeartRateMonitor.debug.xcconfig"; sourceTree = "<group>"; };
-		5C03606B1FB90013007BC593 /* PP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PP.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5C03606B1FB90013007BC593 /* Porterable.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Porterable.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C03606E1FB90013007BC593 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5C0360731FB90013007BC593 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5C0360751FB90013007BC593 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -75,7 +75,7 @@
 		5C03606C1FB90013007BC593 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				5C03606B1FB90013007BC593 /* PP.app */,
+				5C03606B1FB90013007BC593 /* Porterable.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -155,7 +155,7 @@
 			);
 			name = HeartRateMonitor;
 			productName = HeartRateMonitor;
-			productReference = 5C03606B1FB90013007BC593 /* PP.app */;
+			productReference = 5C03606B1FB90013007BC593 /* Porterable.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -214,11 +214,13 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-HeartRateMonitor/Pods-HeartRateMonitor-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/CSV.swift/CSV.framework",
 				"${BUILT_PRODUCTS_DIR}/Charts/Charts.framework",
 				"${BUILT_PRODUCTS_DIR}/JTAppleCalendar/JTAppleCalendar.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CSV.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Charts.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JTAppleCalendar.framework",
 			);
@@ -412,9 +414,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9695ZTHYA3;
 				INFOPLIST_FILE = HeartRateMonitor/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.powerPorter.HeartRateMonitor;
-				PRODUCT_NAME = PP;
+				PRODUCT_NAME = Porterable;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -428,9 +432,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9695ZTHYA3;
 				INFOPLIST_FILE = HeartRateMonitor/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.powerPorter.HeartRateMonitor;
-				PRODUCT_NAME = PP;
+				PRODUCT_NAME = Porterable;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

@@ -30,10 +30,8 @@ import CoreBluetooth
 
 let heartRateServiceCBUUID = CBUUID(string: "0x00FF")
 let heartRateMeasurementCharacteristicCBUUID = CBUUID(string: "FFE8")
-let spo2MeasurementCharacteristicCBUUID = CBUUID(string: "FFEC")
+//let spo2MeasurementCharacteristicCBUUID = CBUUID(string: "FFEC")
 let accMeasurementCharacteristicCBUUID = CBUUID(string: "FFF8")
-//let accYMeasurementCharacteristicCBUUID = CBUUID(string: "FFF4")
-//let accZMeasurementCharacteristicCBUUID = CBUUID(string: "FFF8")
 let gsrMeasurementCharacteristicCBUUID = CBUUID(string: "FFFC")
 
 
@@ -129,13 +127,15 @@ class BluetoothController: NSObject, CBCentralManagerDelegate, CBPeripheralDeleg
       let bpm = oneByteCharacteristicToData(from: characteristic)
       delegate?.didReceiveData(String(bpm))
     case gsrMeasurementCharacteristicCBUUID:
+      let gsr = twoByteCharacteristicToData(from: characteristic)
+      delegate?.didReceiveData(String(gsr))
       #if DEBUG
-        print("GSR = \(twoByteCharacteristicToData(from: characteristic))")
+        print("GSR = \(gsr)")
       #endif
-    case spo2MeasurementCharacteristicCBUUID:
-      #if DEBUG
-        print("ROS = \(oneByteCharacteristicToData(from: characteristic))")
-      #endif
+//    case spo2MeasurementCharacteristicCBUUID:
+//      #if DEBUG
+//        print("ROS = \(oneByteCharacteristicToData(from: characteristic))")
+//      #endif
     case accMeasurementCharacteristicCBUUID:
       #if DEBUG
         print("Acc = \(accCharacteristicToData(from: characteristic))")

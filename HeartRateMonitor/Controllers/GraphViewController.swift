@@ -56,13 +56,23 @@ class GraphViewController: UIViewController {
     switch segment.selectedSegmentIndex
     {
     case 0:
-      textDebug.text = "Graph of day"
+      // Filter for day
+      #if DEBUG
+      print("Graph: Day")
+      #endif
     case 1:
-      textDebug.text = "Graph of week"
+      // filter for week
+      #if DEBUG
+      print("Graph: Week")
+      #endif
     case 2:
-      textDebug.text = "Graph of momth"
+      // filter for month
+      #if DEBUG
+      print("Graph: Month")
+      #endif
     default:
-      textDebug.text = "Default"
+      //
+      print("Graph switch statement out of bounds")
     }
   }
   
@@ -85,11 +95,10 @@ class GraphViewController: UIViewController {
     //this is the Array that will eventually be displayed on the graph.
     var lineChartEntry  = [ChartDataEntry]()
 
-      
-    //here is the for loop
-    for i in 0..<numbers.count {
+    // HeartRate graph
+    // TODO: Need to add filtering for date
+    for i in 0..<BTSample.samples.count {
       // here we set the X and Y status in a data chart entry
-//      let value = ChartDataEntry(x: Double(i), y: numbers[i])
       let value = ChartDataEntry(x: Double(i), y: Double(BTSample.samples[i].heartrate))
       lineChartEntry.append(value) // here we add it to the data set
     }

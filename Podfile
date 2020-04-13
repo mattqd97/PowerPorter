@@ -6,6 +6,7 @@ target 'HeartRateMonitor' do
   use_frameworks!
   pod 'Charts' 
   pod 'JTAppleCalendar'
+  pod 'CSV.swift', '~> 2.4.3'
 
   # Pods for HeartRateMonitor
 
