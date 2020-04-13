@@ -176,10 +176,10 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d7l-Z9-S1h">
-                                                    <rect key="frame" x="13" y="5" width="69" height="33"/>
+                                                    <rect key="frame" x="15" y="5" width="72" height="33"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <state key="normal" title="About us">
+                                                    <state key="normal" title="About Us">
                                                         <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     </state>
                                                 </button>
@@ -195,7 +195,19 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="a7P-fM-6b8" id="qcs-ce-EcT">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="About Porterable" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zWa-w0-eYO">
+                                                    <rect key="frame" x="16" y="11" width="131" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="81y-eq-OAT" kind="show" id="BM4-KJ-cYa"/>
+                                        </connections>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
@@ -361,11 +373,11 @@
                         <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
                         <viewLayoutGuide key="safeArea" id="edW-So-I9d"/>
                     </view>
-                    <navigationItem key="navigationItem" title="AboutPage" id="JeW-Ls-vyB" userLabel="About Us"/>
+                    <navigationItem key="navigationItem" title="About Us" id="JeW-Ls-vyB" userLabel="About Us"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2F8-rb-zGy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1708" y="1700.5997001499252"/>
+            <point key="canvasLocation" x="1708" y="1702"/>
         </scene>
         <!--Ib Calendar Data Source-->
         <scene sceneID="WKo-3a-7qp">
@@ -566,6 +578,40 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XSN-ID-pKV" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2588" y="937"/>
+        </scene>
+        <!--About Us-->
+        <scene sceneID="06K-PC-SaQ">
+            <objects>
+                <viewController id="81y-eq-OAT" userLabel="About Us" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="x8N-p5-2JN">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="About Porterable:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hlr-jW-qf4">
+                                <rect key="frame" x="120" y="103" width="135" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jb0-Ps-sIL">
+                                <rect key="frame" x="27" y="132" width="332" height="185"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <string key="text">Porterable was created as a part of our capstone design project to help students manage their stress better. By using sensors to measure heart rate, GSR, and motion, our device collects physiological data correlated with stress. Our app uses this data to classify stress and display results in a user-friendly format.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <viewLayoutGuide key="safeArea" id="nnt-Zi-fcd"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="About Porterable" id="zEh-KN-QfI" userLabel="About Us"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YHi-Cr-R3K" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1708" y="2479.6101949025488"/>
         </scene>
     </scenes>
     <resources>
