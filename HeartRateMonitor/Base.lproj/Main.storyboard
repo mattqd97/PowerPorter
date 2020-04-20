@@ -160,7 +160,7 @@
         <!--Settings-->
         <scene sceneID="iSz-ed-1DO">
             <objects>
-                <tableViewController id="wql-oA-0H1" sceneMemberID="viewController">
+                <tableViewController id="wql-oA-0H1" customClass="TrainNearestNeighborsViewController" customModule="Porterable" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="8MZ-Bw-pZ1">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -263,6 +263,18 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="vUa-Mk-QTL" id="DiK-Fs-OvQ">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rbe-hb-d09">
+                                                    <rect key="frame" x="16" y="6" width="70" height="30"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <state key="normal" title="Train Data"/>
+                                                    <connections>
+                                                        <action selector="trainButtonPressed:" destination="mtS-Sc-tCX" eventType="touchUpInside" id="luy-mt-hoU"/>
+                                                        <action selector="trainData:" destination="wql-oA-0H1" eventType="touchUpInside" id="77E-aq-plv"/>
+                                                        <action selector="trainData:" destination="mtS-Sc-tCX" eventType="touchUpInside" id="r1B-Ef-0Sq"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </cells>
@@ -276,6 +288,7 @@
                     <tabBarItem key="tabBarItem" title="Settings" image="gear" catalog="system" id="vQH-3F-eIb"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MYY-GT-nTJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="mtS-Sc-tCX" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="704.79999999999995" y="1702.3988005997003"/>
         </scene>
@@ -300,7 +313,7 @@
                                 </connections>
                             </segmentedControl>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="emS-6T-KJO" customClass="LineChartView" customModule="Charts">
-                                <rect key="frame" x="16" y="150" width="343" height="413"/>
+                                <rect key="frame" x="16" y="105" width="343" height="432"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             </view>

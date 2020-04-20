@@ -74,21 +74,10 @@ class GraphViewController: UIViewController {
       //
       print("Graph switch statement out of bounds")
     }
-  }
-  
-  //MARK: For debug
-  
-  @IBAction func btnPressed(_ sender: Any) {
-    //gets input from the textbox - expects input as double/int
-    guard let input  = Double(txtBox.text!)
-      else {
-        print("Cound not unwrap \(String(describing: txtBox.text))")
-        return
-      }
-    
-    numbers.append(input) //here we add the data to the array.
     updateGraph()
   }
+  
+  //MARK: Update Graph
   
   // Function that updates graph
   func updateGraph(){
@@ -112,7 +101,7 @@ class GraphViewController: UIViewController {
       
 
     chartView.data = data //finally - it adds the chart data to the chart and causes an update
-    chartView.chartDescription?.text = "My awesome chart" // Here we set the description for the graph
+    chartView.chartDescription?.text = "Heartrate Chart" // Here we set the description for the graph
   }
   
 

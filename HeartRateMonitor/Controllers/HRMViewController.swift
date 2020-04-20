@@ -15,6 +15,9 @@ class HRMViewController: UIViewController {
     
     // Debug
     BTSample.readCSV()
+    
+    // For model
+    Models.copyEmptyNearestNeighbors()
       
 //    // set up bluetooth
 //    bluetooth = BluetoothController(self)

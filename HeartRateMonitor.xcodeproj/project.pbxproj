@@ -12,6 +12,10 @@
 		5C0360741FB90013007BC593 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C0360721FB90013007BC593 /* Main.storyboard */; };
 		5C0360761FB90013007BC593 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5C0360751FB90013007BC593 /* Assets.xcassets */; };
 		5C0360791FB90013007BC593 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C0360771FB90013007BC593 /* LaunchScreen.storyboard */; };
+		A936E7F8244D32CE00E034EB /* HandskNN.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = A936E7F7244D32CE00E034EB /* HandskNN.mlmodel */; };
+		A936E7FB244D335A00E034EB /* TrainNearestNeighborsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A936E7FA244D335A00E034EB /* TrainNearestNeighborsViewController.swift */; };
+		A936E7FD244D36E000E034EB /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = A936E7FC244D36E000E034EB /* Models.swift */; };
+		A936E802244D38BF00E034EB /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = A936E801244D38BF00E034EB /* Helpers.swift */; };
 		A93C3F0123F1EBC600FBAB15 /* GraphViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A93C3F0023F1EBC600FBAB15 /* GraphViewController.swift */; };
 		A93C3F0323F1EBD800FBAB15 /* HRMViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A93C3F0223F1EBD800FBAB15 /* HRMViewController.swift */; };
 		A93C3F0523F1F58E00FBAB15 /* TabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A93C3F0423F1F58E00FBAB15 /* TabViewController.swift */; };
@@ -35,6 +39,10 @@
 		5C0360751FB90013007BC593 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5C0360781FB90013007BC593 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5C03607A1FB90013007BC593 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A936E7F7244D32CE00E034EB /* HandskNN.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = HandskNN.mlmodel; sourceTree = "<group>"; };
+		A936E7FA244D335A00E034EB /* TrainNearestNeighborsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TrainNearestNeighborsViewController.swift; path = /Users/mattqd97/Desktop/Spring_2020/SeniorDesign/PowerPorterIOS/HeartRateMonitor/Controllers/TrainNearestNeighborsViewController.swift; sourceTree = "<absolute>"; };
+		A936E7FC244D36E000E034EB /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Models.swift; path = /Users/mattqd97/Desktop/Spring_2020/SeniorDesign/PowerPorterIOS/HeartRateMonitor/Models.swift; sourceTree = "<absolute>"; };
+		A936E801244D38BF00E034EB /* Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Helpers.swift; path = ../Helpers.swift; sourceTree = "<group>"; };
 		A93C3F0023F1EBC600FBAB15 /* GraphViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GraphViewController.swift; sourceTree = "<group>"; };
 		A93C3F0223F1EBD800FBAB15 /* HRMViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HRMViewController.swift; sourceTree = "<group>"; };
 		A93C3F0423F1F58E00FBAB15 /* TabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabViewController.swift; sourceTree = "<group>"; };
@@ -84,11 +92,12 @@
 			isa = PBXGroup;
 			children = (
 				A9CAA5ED240D56DA004D925B /* Breathe */,
+				A93C3EFC23F1E97A00FBAB15 /* Controllers */,
+				A936E7F9244D32D900E034EB /* Model */,
 				5C03606E1FB90013007BC593 /* AppDelegate.swift */,
 				A93C3F0623F1FA4A00FBAB15 /* BTSample.swift */,
 				A9B86A2523F3A2A9006655A7 /* BluetoothController.swift */,
 				A9B86A2923F3AC19006655A7 /* DataCell.swift */,
-				A93C3EFC23F1E97A00FBAB15 /* Controllers */,
 				5C0360721FB90013007BC593 /* Main.storyboard */,
 				5C0360771FB90013007BC593 /* LaunchScreen.storyboard */,
 				5C0360751FB90013007BC593 /* Assets.xcassets */,
@@ -112,6 +121,17 @@
 				147C18AB3F0AE00E2382B705 /* Pods_HeartRateMonitor.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A936E7F9244D32D900E034EB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A936E7FA244D335A00E034EB /* TrainNearestNeighborsViewController.swift */,
+				A936E7F7244D32CE00E034EB /* HandskNN.mlmodel */,
+				A936E7FC244D36E000E034EB /* Models.swift */,
+				A936E801244D38BF00E034EB /* Helpers.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		A93C3EFC23F1E97A00FBAB15 /* Controllers */ = {
@@ -258,6 +278,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A936E7FB244D335A00E034EB /* TrainNearestNeighborsViewController.swift in Sources */,
 				A9CAA5EC240D56BD004D925B /* BreatheViewController.swift in Sources */,
 				A93C3F0723F1FA4A00FBAB15 /* BTSample.swift in Sources */,
 				A93C3F0523F1F58E00FBAB15 /* TabViewController.swift in Sources */,
@@ -265,7 +286,10 @@
 				A9B86A2A23F3AC19006655A7 /* DataCell.swift in Sources */,
 				A96C8EAB2407237D0075A2E7 /* ActivitiesViewController.swift in Sources */,
 				A93C3F0123F1EBC600FBAB15 /* GraphViewController.swift in Sources */,
+				A936E7F8244D32CE00E034EB /* HandskNN.mlmodel in Sources */,
+				A936E7FD244D36E000E034EB /* Models.swift in Sources */,
 				A9B86A2623F3A2A9006655A7 /* BluetoothController.swift in Sources */,
+				A936E802244D38BF00E034EB /* Helpers.swift in Sources */,
 				A9CAA5F1240D5736004D925B /* CABasicAnimation+Custom.swift in Sources */,
 				A9B86A2823F3A9B2006655A7 /* CalendarViewController.swift in Sources */,
 				A9CAA5EF240D56FE004D925B /* BreatheView.swift in Sources */,
@@ -414,7 +438,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9695ZTHYA3;
 				INFOPLIST_FILE = HeartRateMonitor/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.powerPorter.HeartRateMonitor;
@@ -432,7 +456,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9695ZTHYA3;
 				INFOPLIST_FILE = HeartRateMonitor/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.powerPorter.HeartRateMonitor;
