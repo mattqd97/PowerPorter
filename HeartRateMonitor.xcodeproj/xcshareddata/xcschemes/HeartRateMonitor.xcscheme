@@ -28,6 +28,26 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "A95550D3245A4FC50007ECF2"
+               BuildableName = "PorterableTests.xctest"
+               BlueprintName = "PorterableTests"
+               ReferencedContainer = "container:HeartRateMonitor.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "A95550E1245A50800007ECF2"
+               BuildableName = "PorterableUITests.xctest"
+               BlueprintName = "PorterableUITests"
+               ReferencedContainer = "container:HeartRateMonitor.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction

@@ -64,6 +64,7 @@ class BTSample: NSObject, NSCoding {
     self.heartrate = heartrate
     self.gsr = gsr
     self.EMG = emg
+    self.stressed = stress
     self.time = Date() // current date
   }
   
@@ -122,6 +123,7 @@ class BTSample: NSObject, NSCoding {
       if rowAsDouble.count != 5 {
         continue
       }
+      print("\(rowAsDouble)")       // for debug
       
       // Here is how the CSV columns are
       // ECG | HR | handGSR | EMG | stress

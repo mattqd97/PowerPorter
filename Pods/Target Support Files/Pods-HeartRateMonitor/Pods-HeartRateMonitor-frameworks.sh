@@ -161,14 +161,14 @@ strip_invalid_archs() {
 
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
-  install_framework "${BUILT_PRODUCTS_DIR}/CSV.swift/CSV.framework"
-  install_framework "${BUILT_PRODUCTS_DIR}/Charts/Charts.framework"
-  install_framework "${BUILT_PRODUCTS_DIR}/JTAppleCalendar/JTAppleCalendar.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/CSV.swift-framework/CSV.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/Charts-framework/Charts.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/JTAppleCalendar-framework/JTAppleCalendar.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
-  install_framework "${BUILT_PRODUCTS_DIR}/CSV.swift/CSV.framework"
-  install_framework "${BUILT_PRODUCTS_DIR}/Charts/Charts.framework"
-  install_framework "${BUILT_PRODUCTS_DIR}/JTAppleCalendar/JTAppleCalendar.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/CSV.swift-framework/CSV.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/Charts-framework/Charts.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/JTAppleCalendar-framework/JTAppleCalendar.framework"
 fi
 if [ "${COCOAPODS_PARALLEL_CODE_SIGN}" == "true" ]; then
   wait
